@@ -62,7 +62,7 @@ int main ()
 			default: cout<<"\n POGRESEN IZBOR "<<endl;
 		}
 	}
-while (izb!='c');
+while (izbor!='c');
 	return 0;
 }
 void KodiranjeString (char VnesenTekst [], int dolVnesenTeks, int broj)
@@ -116,7 +116,7 @@ void DekodiranjeString (char VnesenTekst [], int dolVnesenTeks, int broj)
 			//kontrola dali bukvata e mala
 			if (ascibroj>=97 && ascibroj<=122)
 			{
-				If (ascibroj-broj>=97)
+				if (ascibroj-broj>=97)
 					VnesenTekst[i]=(char)((int)VnesenTekst[i]-broj);
 				else
 			VnesenTekst[i]=(char)(122-(97-((int)VnesenTekst[i]-broj))+1);
