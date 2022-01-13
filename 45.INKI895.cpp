@@ -1,3 +1,4 @@
+//Simona Gulevska INKI895 45.Kodiranje i dekodiranje na tekst spored daden kluc
 #include<iostream>
 #include<cstring>
 using namespace std;
@@ -6,7 +7,7 @@ void KodiranjeString (char VnesenTekst [], int dolVnesenTeks, int broj);
 void DekodiranjeString (char VnesenTekst [], int dolVnesenTeks, int broj);
 int main ()
 {
-	char VnesenTekst [400];
+	char VnesenTekst [400],vnesentextpom [100];
 	char broj [20], izbor;
 	int dolVnesenTeks, cifra, brcifri= 0, brojac=0;
 	//vnesuvanje na tekst za kodiranje so kontrola za tocen vnes
@@ -43,9 +44,10 @@ int main ()
 	//meni so moznost za izbor
 	do
 	{
-		cout<<"\n a. Kodiranje ";
-		cout<<"\n b. Dekodiranje ";
-		cout<<"\n c. Izlez ";
+		cout<<"\n a. Kodiranje na vnesen tekst ";
+		cout<<"\n b. Dekodiranje na kodiraniot tekst ";
+		cout<<"\n c. Dekodiranje vnesen tekst ";
+		cout<<"\n d. Izlez ";
 		cout<<"\n Vnesete izbor: ";
 		cin>>izbor;
 		switch(izbor)
@@ -58,11 +60,14 @@ int main ()
 					//povik na funkcija za dekodiranje
 					 DekodiranjeString (VnesenTekst, dolVnesenTeks, brojac);
 					 break;
-			case 'c': break;
+			case 'c': 
+                    //povik na fukcija za dekodiranje
+                    DekodiranjeString (vnesentextpom, dolVnesenTeks, brojac);
+                    break;
 			default: cout<<"\n POGRESEN IZBOR "<<endl;
 		}
 	}
-while (izbor!='c');
+while (izbor!='d');
 	return 0;
 }
 void KodiranjeString (char VnesenTekst [], int dolVnesenTeks, int broj)
